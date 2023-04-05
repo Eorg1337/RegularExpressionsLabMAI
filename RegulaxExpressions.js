@@ -8,7 +8,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString(/abc/,"abccc")) 
+console.log(checkString(/abc\w*/,"abc")) 
 
 
 
@@ -22,7 +22,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString2(/[\D*=';]*\d*[\D*=';]*/,"define '123'"))
+console.log(checkString2(/[\D*=';]*\d*[\D*=';]*/,"var g = 123;"))
 
 
 
@@ -36,7 +36,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString3(/\w*\./,"abc1"))
+console.log(checkString3(/[\w*?=+]{3}\./,"abc1"))
 
 //Задание 3
 const checkString4 = function(pattern,myText){
@@ -48,7 +48,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString4(/[cmf]an$/,"can"))
+console.log(checkString4(/[cmf]an$/,"fan"))
 
 //Задание 4
 const checkString5 = function(pattern,myText){
@@ -60,7 +60,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString5(/[^b]og/,"hog"))
+console.log(checkString5(/[^b]og/,"dog"))
 
 //Задание 5
 const checkString6 = function(pattern,myText){
@@ -72,7 +72,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString6(/^[A-Z]\D*/,"Ana"))
+console.log(checkString6(/^[A-Z]\D*/,"Cpc"))
 
 
 //Задание 6
@@ -85,7 +85,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString7(/waz{2,5}up/,"wazzzzup"))
+console.log(checkString7(/waz{2,5}up/,"wazzzup"))
 
 
 //Задание 7
@@ -98,7 +98,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString8(/a\w+/,"abbbbcccc"))
+console.log(checkString8(/a\w+/,"aacc"))
 
 
 //Задание 8
@@ -111,7 +111,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString9(/\d\d? files? found?\?/,"1 file found?"))
+console.log(checkString9(/\d\d? files? found?\?/,"24 files found?"))
 
 
 //Задание 9
@@ -124,7 +124,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString10(/\s+abc/,"  abc"))
+console.log(checkString10(/\s+abc/,"       abc"))
 
 
 
@@ -138,7 +138,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString11(/^([\D]+: successful)$/,"Last Mission: successful"))
+console.log(checkString11(/^([\D]+: successful)$/,"Mission: successful"))
 
 
 
@@ -153,7 +153,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString12(/^(\w+).pdf$/,"file_record_transcript.pdf"))
+console.log(checkString12(/^(\w+).pdf$/,"file_07241999.pdf"))
 
 
 
@@ -167,7 +167,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString13(/^(\w{3} (\d{4}))$/,"Jan 1987"))
+console.log(checkString13(/^(\w{3} (\d{4}))$/,"Aug 2011"))
 
 
 //Задание 13
@@ -180,7 +180,7 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString14(/^(\d+)x(\d+)$/,"1280x720"))
+console.log(checkString14(/^(\d+)x(\d+)$/,"1024x768"))
 
 
 
@@ -195,4 +195,4 @@ if(itemsList!==null){
     return false;
 }
 }
-console.log(checkString15(/(I love (cats|dogs))/,"I love cats"))
+console.log(checkString15(/(I love (cats|dogs))/,"I love dogs"))
